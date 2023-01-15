@@ -1,6 +1,6 @@
 // import krkrIcon from './krkrIcon.svg';
 import styles from './Gallery.module.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MinimizeIcon from '@mui/icons-material/HorizontalRule';
 import MaximizeIcon from '@mui/icons-material/CropSquare';
 import CloseIcon from '@mui/icons-material/Close';
@@ -17,22 +17,41 @@ const Gallery = () => {
   }
   const toMax = () => {
     window.controlProgram.maxApp();
-    setState(() => {
-        const nextState = {
-          currentMaximizeAppIcon: state.currentMaximizeAppIcon === maximizeAppIcon ? unmaximizeAppIcon : maximizeAppIcon,
-        }
-        return {...state, ...nextState};
-    });
   }
   const toClose = () => {
-    // window.electronAPI.setTitle();
     window.controlProgram.closeApp();
   }
   const [state, setState] = useState({
     currentMaximizeAppIcon: maximizeAppIcon,
+    firstRender: true,
   })
+  useEffect(()=>{
+    if(state.firstRender){
+      window.addEventListener('resize', () => {
+        const object = document.getElementById('react-app').children[0];
+        var nextMaximizeAppIcon = maximizeAppIcon;
+        if(screen.availHeight === object.clientHeight && screen.availWidth === object.clientWidth){
+          nextMaximizeAppIcon = unmaximizeAppIcon;
+        }
+        if(state.currentMaximizeAppIcon !== nextMaximizeAppIcon){
+          setState(() => {
+            const nextState = {
+              currentMaximizeAppIcon: nextMaximizeAppIcon,
+            }
+            return {...state, ...nextState};
+          });
+        }
+      });
+      setState(() => {
+        const nextState = {
+          firstRender: false,
+        }
+        return {...state, ...nextState};
+      });
+    };
+  });
   return (
-    <div className={styles.gallery}>
+    <div className={styles.gallery} >
       <div className={styles.header}>
           <img src={pngMainIcon} className={styles.pngSmallIcon} alt='pngSmallIcon' />
           <button className={styles.minimizeIcon} onClick={toMin}>
