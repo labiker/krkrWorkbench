@@ -1,0 +1,95 @@
+button {
+    -webkit-app-region: no-drag;
+}
+.gallery {
+    position: absolute;
+    top: 0%;
+    left:0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 30, 30);
+}
+.header {
+    position: absolute;
+    top: 0%;
+    left:0%;
+    width: 100%;
+    height: 35px;
+    background-color: rgb(43, 46, 59);
+    user-select: none;
+    -webkit-app-region: drag;
+}
+.krkrIcon {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 30%;
+    height: auto;
+}
+.pngSmallIcon {
+    position: absolute;
+    top: 20%;
+    left: 9px;
+    width: auto;
+    height: 60%;
+}
+.pngMainIcon {
+    position: absolute;
+    top: 20%;
+    left: 46%;
+    width: 8%;
+    height: auto;
+}
+.programControlButtonGroup {
+    position: absolute;
+    right: 0px;
+}
+.minimizeIcon {
+    position: absolute;
+    right: 100px;
+    width: 50px;
+    height: 100%;
+    border-width: 0px;
+    transition: background-color 0.3s;
+    background-color: rgb(43,46,59);
+}
+.minimizeIcon:hover {
+    background-color: rgb(70, 70, 70);
+}
+.minimizeAppIcon {
+    width: 32px;
+    height: 32px;
+}
+.maximizeIcon {
+    position: absolute;
+    right: 50px;
+    width: 50px;
+    height: 100%;
+    border-width: 0px;
+    transition: background-color 0.3s;
+    background-color: rgb(43,46,59);
+}
+.maximizeIcon:hover {
+    background-color: rgb(70, 70, 70);
+}
+.maximizeAppIcon {
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+}
+.closeIcon {
+    position: absolute;
+    right: 0px;
+    width: 50px;
+    height: 100%;
+    border-width: 0px;
+    transition: background-color 0.3s;
+    background-color: rgb(43,46,59);
+}
+.closeIcon:hover {
+    background-color: rgb(232,17,35);
+}
+.closeAppIcon {
+    width: 32px;
+    height: 32px;
+}
