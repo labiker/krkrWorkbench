@@ -17,3 +17,9 @@ contextBridge.exposeInMainWorld('controlProgram', {
     maxApp: () => ipcRenderer.send('max-app'),
     closeApp: () => ipcRenderer.send('close-app'),
 });
+contextBridge.exposeInMainWorld('systemMenu', {
+    openFolder: () => ipcRenderer.send('open-folder'),
+});
+contextBridge.exposeInMainWorld('systemInfo', {
+    getAppPath:  () => ipcRenderer.invoke('get-appPath'),
+})
