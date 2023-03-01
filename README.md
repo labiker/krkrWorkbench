@@ -2,5 +2,7 @@
 krkr,kirikiri,Electron
 
 step:
-cd electron-app
-npm start
+
+①cd electron-app
+
+②krkr,kirikiri,Electron
