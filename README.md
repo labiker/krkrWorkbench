@@ -5,4 +5,4 @@ step:
 
 ①cd electron-app
 
-②krkr,kirikiri,Electron
+②npm start
