@@ -1,0 +1,40 @@
+button {
+    -webkit-app-region: no-drag;
+    transition: background-color 0.3s;
+}
+.container{
+    position: relative;
+    left: 0px;
+    right: 50px;
+    height: 65px;
+    border-radius: 5px;
+    background-color: rgb(46, 46, 46);
+}
+.container:hover{
+    background-color: rgb(53, 53, 53);
+}
+.imageIcon{
+    position: absolute;
+    top: 35%;
+    left: 18px;
+    width: auto;
+    height: 30%;
+}
+.title{
+    position: absolute;
+    left: 60px;
+    top: 0px;
+    font-size: 15px;
+    white-space: nowrap;
+    user-select:none;
+    color:rgb(255, 255, 255);
+}
+.descripe{
+    position: absolute;
+    left: 60px;
+    top: 22px;
+    font-size: 12px;
+    white-space: nowrap;
+    user-select:none;
+    color:rgb(210, 210, 210);
+}

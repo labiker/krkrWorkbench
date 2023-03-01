@@ -1,0 +1,53 @@
+button {
+    -webkit-app-region: no-drag;
+    transition: background-color 0.3s;
+}
+.container{
+    position: relative;
+    left: 0px;
+    right: 50px;
+    height: 65px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    background-color: rgb(46, 46, 46);
+}
+.container:hover{
+    background-color: rgb(53, 53, 53);
+}
+.imageIcon{
+    position: absolute;
+    top: 35%;
+    left: 18px;
+    width: auto;
+    height: 30%;
+}
+.title{
+    position: absolute;
+    left: 60px;
+    top: 7px;
+    font-size: 15px;
+    white-space: nowrap;
+    user-select:none;
+    color:rgb(255, 255, 255);
+}
+.input{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 90px;
+    height: 30px;
+    border: 2px solid rgb(70, 70, 70);
+    border-radius: 5px;
+    color:rgb(190, 190, 190);
+    font-size: 15px;
+    text-align: right;
+    padding-right: 10px;
+    background-color: rgba(78, 78, 78, 0);
+}
+.input:hover{
+    border: 2px solid rgb(255, 255, 255);
+}
+.input:focus{
+    outline: none;
+    border: 2px solid rgb(144, 202, 249);
+}

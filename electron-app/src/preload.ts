@@ -22,4 +22,5 @@ contextBridge.exposeInMainWorld('systemMenu', {
 });
 contextBridge.exposeInMainWorld('systemInfo', {
     getAppPath:  () => ipcRenderer.invoke('get-appPath'),
+    getImgBase64:  (relativePath:string) => ipcRenderer.invoke('get-imgBase64', relativePath),
 })

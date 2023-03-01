@@ -1,0 +1,49 @@
+.systemMenu {
+    position: absolute;
+    left: 40px;
+    width: 200px;
+    height: 100%;
+    z-index: 100;
+}
+button {
+    color: rgb(160, 160, 160);
+    border-width: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: background-color 0.3s;
+}
+.fileButton {
+    position: relative;
+    top: 10%;
+    width: auto;
+    height: 80%;
+    border-radius: 5px;
+    background-color: rgb(43,46,59);
+}
+.fileButton:hover {
+    background-color: rgb(70, 70, 70);
+}
+.dropDownMenu {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    height: auto;
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: rgb(43,46,59);
+    z-index: 100;
+}
+.openFolderButton {
+    position: relative;
+    left: 5px;
+    width: 290px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(43,46,59);
+}
+.openFolderButton:hover {
+    background-color: rgb(70, 70, 70);
+}
